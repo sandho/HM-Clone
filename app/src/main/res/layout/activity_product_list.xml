@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/appbar_layout"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@android:color/holo_red_light"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summer Sale: Up to \n 50% online &amp; in \nstores"
+                android:layout_weight="8.5"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:lineSpacingExtra="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CATEGORY"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FILTER &amp; SORT"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textSize="11sp"
+                android:drawableRight="@drawable/ic_baseline_filter_list_24"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            >
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="2.5"
+                app:tabIndicatorColor="@color/hm_red_color"
+                app:tabTextColor="#888888"
+                app:tabSelectedTextColor="@color/hm_red_color"
+                app:tabIndicatorFullWidth="false"
+                app:tabTextAppearance="@style/TabLayout"
+                >
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product"
+                    />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="2"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="0dp"
+                android:visibility="invisible"
+                >
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_baseline_filter_list_24"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_baseline_favorite_border_24"
+                    android:backgroundTint="@color/hm_red_color"
+                    />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1.5"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="0dp"
+                >
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_baseline_crop_din_24"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/ic_outline_border_all_24"
+                    />
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_products_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/list_product_item"
+            app:spanCount="2"
+            android:layout_margin="15dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

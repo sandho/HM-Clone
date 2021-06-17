@@ -1,18 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            layout="@layout/appbar_layout"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/free_shipping"
+            android:textAlignment="center"
+            android:layout_margin="15dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:lineSpacingExtra="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/hm_red_color"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Summer Sale: Up to \n 50% online &amp; in \nstores"
+                android:layout_weight="8.5"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:lineSpacingExtra="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/image_view_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Linen Overshirt"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspired by workwear. Crafted for confidence"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_yellow"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Become an H&amp;M \nMember &amp; get 10% off \nyour first purchase \n+ rewards just for \nshopping!"
+                android:layout_weight="8.5"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textSize="24sp"
+                android:textColor="@color/hm_red_color"
+                android:textStyle="bold"
+                android:lineSpacingExtra="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't forget to opt into Fashion News to have your offers and rewards delivered right to your inbox"
+                android:textAlignment="center"
+                android:layout_margin="15dp"
+                android:gravity="center_horizontal"
+                android:textSize="10sp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Divided"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:id="@+id/men_products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baby"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kids"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H&amp;M Home"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sale"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sustainability"
+                android:textSize="28sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

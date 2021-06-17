@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HM</string>
+    <string name="free_shipping">Free shipping over $40: Select Economy, Priority, Expedited, Ship to Store or UPS Access Point at checkout.</string>
 </resources>
